@@ -13,4 +13,4 @@ git pull
 cd ~
 chmod 600 acme.json
 docker network create web
-docker-compose up
+docker-compose up --build -d
