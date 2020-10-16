@@ -31,15 +31,15 @@
     git clone https://github.com/Gruppe-NoSQL/nosql-quiz-hosting.git
 ```
 
-## 4. Create process.env
+## 5. Create process.env
 
 ```
     cd nosql-quiz-backend
-    touch process.evn
+    touch process.env
     echo "DATABASE_URL=[YOUR_MONGODB_LINK]" > process.env
 ```
 
-## 5. Copy Contents of Hosting Repository to main folder and modify access rights for acme.json and sh scripts
+## 6. Copy Contents of Hosting Repository to main folder and modify access rights for acme.json and sh scripts
 
 ```
     cd nosql-quiz-hosting
@@ -75,3 +75,10 @@
 
 - Remember to always set chmod 600 for acme.json, when you copied the newest version of hosting scripts
 - Remember to create process.env if you deleted backend repository
+- if firewall is enabled you need to expose port 80 and port 443:
+```
+    firewall-cmd --zone=public --permanent --add-port 443/tcp
+    firewall-cmd --zone=public --permanent --add-port 80/tcp
+    firewall-cmd --reload
+    systemctl restart firewalld
+```

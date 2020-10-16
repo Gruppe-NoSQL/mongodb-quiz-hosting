@@ -1,2 +1,2 @@
 docker network create web
-docker-compose up
+docker-compose up -d --build
