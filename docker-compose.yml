@@ -47,8 +47,6 @@ services:
       - 'traefik.frontend.rule=Host:quiz.fynn-weyrich.de'
       - 'traefik.docker.network=web'
       - 'treafik.port=80'
-    ports:
-      - '80:80'
     volumes:
       - './data/logs:/var/log/nginx'
     networks:
