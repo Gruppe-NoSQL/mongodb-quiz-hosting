@@ -1,0 +1,56 @@
+version: "3"
+
+networks:
+  web:
+    external: true
+
+services:
+  traefik:
+    image: "traefik:v2.3"
+    container_name: "traefik"
+  ports:
+      - "80:80"
+      - "443:443"
+  networks:
+    - web
+  volumes:
+    - "/var/run/docker.sock:/var/run/docker.sock:ro"
+    - "./traefik.toml:/traefik.toml"
+    - "./acme.json:/acme.json"
+  
+  backend:
+    container_name: backend
+    image: backend
+    restart: always
+    build:
+        context: ./nosql-quiz-backend
+        dockerfile: Dockerfile
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.frontend.rule=Host:api.quiz.fynn-weyrich.de'
+      - 'traefik.docker.network=web'
+      - 'treafik.port=3001'
+    ports:
+      - '3001:3001'
+    networks:
+      - web
+
+  frontend:
+    container_name: frontend
+    image: frontend
+    restart: always
+    build:
+        context: ./nosql-quiz-frontend
+        dockerfile: Dockerfile
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.frontend.rule=Host:quiz.fynn-weyrich.de'
+      - 'traefik.docker.network=web'
+      - 'treafik.port=80'
+    ports:
+      - '80:80'
+    volumes:
+      - './data/logs:/var/log/nginx'
+    networks:
+      - web
+

@@ -8,7 +8,7 @@
     git clone https://github.com/Gruppe-NoSQL/mongodb-quiz-frontend
 ```
 
-# 2. Clone Frontend Repository
+## 2. Clone Frontend Repository
 
 [https://github.com/Gruppe-NoSQL/mongodb-quiz-backend](https://github.com/Gruppe-NoSQL/mongodb-quiz-backend)
 
