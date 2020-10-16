@@ -16,6 +16,7 @@ entryPoint = "https"
 onHostRule = true
 
 [docker]
+endpoint = "unix:///var/run/docker.sock"
 domain = "quiz.fynn-weyrich.de"
 watch = true
 network = "web"
