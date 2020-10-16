@@ -12,5 +12,8 @@ git pull
 /bin/cp -a . ..
 cd ~
 chmod 600 acme.json
+chmod +x startContainers.sh
+chmod +x stopContainers.sh
+chmod +x updateContainers.sh
 docker network create web
 docker-compose up --build -d
