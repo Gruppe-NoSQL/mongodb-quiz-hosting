@@ -21,9 +21,9 @@ domain = "quiz.fynn-weyrich.de"
 watch = true
 network = "web"
 
-[[acme.httpChallenge]]
+[acme.httpChallenge]
 entryPoint = "http"
 
-[acme.doamins]
+[[acme.domains]]
 main = "quiz.fynn-weyrich.de"
 sans = ["api.quiz.fynn-weyrich.de"]
