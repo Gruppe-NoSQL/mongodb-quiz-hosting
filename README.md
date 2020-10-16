@@ -59,6 +59,17 @@
     ./stopContainers.sh
 ```
 
+# Update Repositorys
+
+```
+    ./stopContainers.sh
+```
+
+## 1. Stop Containers
+```
+    ./stopContainers.sh
+```
+
 # Notes for Container-Restart
 
 - Remember to always set chmod 600 for acme.json, when you copied the newest version of hosting scripts
