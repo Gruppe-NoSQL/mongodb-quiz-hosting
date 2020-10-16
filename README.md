@@ -48,26 +48,27 @@
     chmod 600 acme.json
     chmod +x startConatiners.sh
     chmod +x stopContainers.sh
+    chmod +x updateContainers.sh
+    chmod
     ./startContainers.sh
 ```
 
 # Stop Containers
 
-## 1. Execute Stop Container Script
-
 ```
     ./stopContainers.sh
+```
+
+# Start Containers
+
+```
+    ./startContainers.sh
 ```
 
 # Update Repositorys
 
 ```
-    ./stopContainers.sh
-```
-
-## 1. Stop Containers
-```
-    ./stopContainers.sh
+    ./updateContainers.sh
 ```
 
 # Notes for Container-Restart
