@@ -28,7 +28,7 @@ services:
         dockerfile: Dockerfile
     labels:
       - 'traefik.enable=true'
-      - 'traefik.frontend.rule=Host:api.quiz.fynn-weyrich.de'
+      - 'traefik.frontend.rule=Host:api.nosql.fynn-weyrich.de'
       - 'traefik.docker.network=web'
       - 'treafik.port=3001'
     ports:
@@ -45,7 +45,7 @@ services:
         dockerfile: Dockerfile
     labels:
       - 'traefik.enable=true'
-      - 'traefik.frontend.rule=Host:quiz.fynn-weyrich.de'
+      - 'traefik.frontend.rule=Host:nosql.fynn-weyrich.de'
       - 'traefik.docker.network=web'
       - 'treafik.port=80'
     volumes:

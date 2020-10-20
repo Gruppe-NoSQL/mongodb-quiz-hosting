@@ -17,7 +17,7 @@ onHostRule = true
 
 [docker]
 endpoint = "unix:///var/run/docker.sock"
-domain = "quiz.fynn-weyrich.de"
+domain = "nosql.fynn-weyrich.de"
 watch = true
 network = "web"
 
@@ -25,5 +25,5 @@ network = "web"
 entryPoint = "http"
 
 [[acme.domains]]
-main = "quiz.fynn-weyrich.de"
-sans = ["api.quiz.fynn-weyrich.de"]
+main = "nosql.fynn-weyrich.de"
+sans = ["api.nosql.fynn-weyrich.de"]
